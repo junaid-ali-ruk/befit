@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BeFit - Premium Gym Apparel</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c8f906",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                        "surface-dark": "#1e1e1e",
+                        "border-dark": "#333333",
+                        "text-secondary": "#a1a1a1"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Montserrat", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for horizontal sections */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-nav {
+            background: rgba(18, 18, 18, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-body selection:bg-primary selection:text-black">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <header class="fixed top-0 left-0 right-0 z-50 border-b border-border-dark glass-nav">
+            <div class="flex items-center justify-between px-6 py-4 max-w-[1280px] mx-auto w-full">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="size-8 text-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-4xl"
+                            style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    </div>
+                    <h2 class="text-white text-2xl font-black tracking-tighter font-display italic">BeFit</h2>
+                </div>
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-white hover:text-primary text-sm font-bold uppercase tracking-widest transition-colors"
+                        href="#">Men</a>
+                    <a class="text-white hover:text-primary text-sm font-bold uppercase tracking-widest transition-colors"
+                        href="#">Women</a>
+                    <a class="text-white hover:text-primary text-sm font-bold uppercase tracking-widest transition-colors"
+                        href="#">Accessories</a>
+                </nav>
+                <!-- Icons -->
+                <div class="flex items-center gap-4">
+                    <button class="text-white hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                    <button class="text-white hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                    </button>
+                    <button class="text-white hover:text-primary transition-colors hidden sm:block">
+                        <span class="material-symbols-outlined">account_circle</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section class="relative h-[85vh] w-full flex items-center justify-center bg-cover bg-center"
+            data-alt="Intense athlete sprinting in dark moody lighting"
+            style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(18,18,18,1)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPlQHbYREem0OFF7buMPIdTAYOgDSi7JWK4nlys_RbLI3hRPRUwrRfeagGOgHs18H7Pd0v4Ev8bUroiOIfg9ya8QFLGebgspA6xh4Ou5ZEfFqga_jbxAvMeDgIUq04YbRpumEs8Ar5KZJ7ejtcpAhio6Xqcv1Er5_U0uwoDACIPFDaI5OAtJlCdgrAcHLuTxSi4HxDCQrPb0VTydnaOrGrKWqnahZtL74znKWXnw3PJwqkZBd1-ifNfR0dyLscTgx2plwdkFw1pVHL");'>
+            <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-black/40"></div>
+            <div class="relative z-10 px-6 max-w-[1280px] w-full flex flex-col items-start gap-6 mt-16">
+                <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm animate-fade-in">Premium Athletic
+                    Gear</span>
+                <h1
+                    class="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] font-display italic tracking-tighter max-w-4xl">
+                    UNLEASH YOUR <br /> <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">POTENTIAL</span>
+                </h1>
+                <p class="text-text-secondary text-lg max-w-xl font-medium leading-relaxed">
+                    Engineered for the elite. Designed for the relentless. Experience the next evolution in performance
+                    apparel.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <button
+                        class="bg-primary hover:bg-[#b0db05] text-black h-12 px-8 rounded-lg font-bold uppercase tracking-wide transition-all transform hover:scale-105 flex items-center gap-2">
+                        Shop Men
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </button>
+                    <button
+                        class="bg-surface-dark border border-border-dark hover:border-white text-white h-12 px-8 rounded-lg font-bold uppercase tracking-wide transition-all">
+                        Shop Women
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Main Content Container -->
+        <main class="flex flex-col gap-24 py-12 px-6 max-w-[1280px] mx-auto w-full z-10">
+            <!-- New Arrivals Section -->
+            <section>
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                    <div>
+                        <h2 class="text-white text-3xl font-display font-bold uppercase tracking-tight">New Arrivals
+                        </h2>
+                        <p class="text-text-secondary mt-1">Fresh gear to elevate your workout.</p>
+                    </div>
+                    <a class="text-white text-sm font-bold border-b border-primary pb-0.5 hover:text-primary transition-colors"
+                        href="#">View All</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="group flex flex-col gap-3">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-dark">
+                            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Man wearing black athletic hoodie looking focused"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0y8k86nJAUGEVciFyR6PD5_wquhLbFHPDnqr-oExYUmy_9p8GwLwMLjVY8HM8JcSvgPdx7GegVoxB-d6ztzvn0RcEpf_CMemWW80umVHpq3vwS0EAHU8fNhtM2Ovt8ml6YWbw0swPyPz1VFaTdPUdF9C_54NVDVTSoTvTItT5N6RiXOP3udxFCPi4oXGIeA9bNdN0NpR1crUNC-P5FkJsG2jB86P7Ubnn3tmBUYTm6ghI7T9d4B5_0qsjK40bZbMvDhvws6ntS4Sj" />
+                            <div
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300">
+                            </div>
+                            <button
+                                class="absolute bottom-4 right-4 bg-primary text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-white shadow-lg">
+                                <span class="material-symbols-outlined w-8">add_shopping_cart</span>
+                            </button>
+                            <div
+                                class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-xs font-bold text-white uppercase">
+                                New</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-white font-bold text-lg group-hover:text-primary transition-colors">Stealth
+                                Hoodie</h3>
+                            <p class="text-text-secondary text-sm">Lightweight thermal control</p>
+                            <p class="text-primary font-bold mt-1">$85.00</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="group flex flex-col gap-3">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-dark">
+                            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Woman tying shoes in gym wearing leggings"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXKSHnHZylSeJS56-SQm9qCNkvhGMj60PscFeNt0GFO-P9JWIf5pNnhKGpCmer67qdtCdEvlsc1hpGh52_Xz559jGsQkGUPdB62c0atOgmX_qsIPcBymKauYcDJPfU-IrnTGfo7iiTNHPl7dTD7hAiRbFKAupNcrDyZ3RFh2B1voh2TE6cVMRc0caUX92p9hBkq0uNqqQkjwQTgN3nkVwwpg5f95Prol-eGIQfvTuX4Lz61naSvB93zU_ltvuCkd7p7KVXEXqHhjUG" />
+                            <button
+                                class="absolute bottom-4 right-4 bg-primary text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-white shadow-lg">
+                                <span class="material-symbols-outlined w-8">add_shopping_cart</span>
+                            </button>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-white font-bold text-lg group-hover:text-primary transition-colors">Velocity
+                                Leggings</h3>
+                            <p class="text-text-secondary text-sm">High-compression fit</p>
+                            <p class="text-primary font-bold mt-1">$68.00</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="group flex flex-col gap-3">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-dark">
+                            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Man lifting weights wearing compression tee"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxkHC_NcvBPf0JGAXMNdKVyllvkfJhFL3_ISjnkvUdigpw5VzvU3x3e5IPjfrDV5eFrXVC7Clys4VE2F6qyCUAam0eym-h3p75FXpWpqhnjQNFSVUImP4czcRwQ5mrD09gJDoGkDOOl2xn_AiVvqrYcvdfI7HluI3rAxqxAvAQhQnJcTfmCcVHxxKf41wx6YyUcUuwEcc4hKQ7Cv-hmx1kPaPbs2cCxCDCHnbXVLhyZ2ccytms0rRm4rbjV6DVcYmFvY0cuI3EZ3yO" />
+                            <button
+                                class="absolute bottom-4 right-4 bg-primary text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-white shadow-lg">
+                                <span class="material-symbols-outlined w-8">add_shopping_cart</span>
+                            </button>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-white font-bold text-lg group-hover:text-primary transition-colors">Core
+                                Compression Tee</h3>
+                            <p class="text-text-secondary text-sm">Muscle support technology</p>
+                            <p class="text-primary font-bold mt-1">$45.00</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="group flex flex-col gap-3">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-dark">
+                            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Woman in sports bra stretching outdoors"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Cc9L8WLXPP4nghJEUOe0b5HASTF3gcps1JRH2RQnGJNJPNNiOtQBLe1Ofwk_BNT0FOdFkIqPV43gcTTMUbgnp-Z_AoIX4_ZUtXRfVqdL54UBQS1ICVDeQQyOQDlOIOoZow3R8Xt6o1LK-DrV7sfKl99y9DPd-pI-IC7CZGd4wJduNv6L3ph1dQoAnUW_8dhNDZRChFL1qeLqltfoYa7lkbvx-gnmsu7sHkPRKxeTWHa_nvgcghkzvP9F_w1J_MDYPZQhMl2eLmwV" />
+                            <button
+                                class="absolute bottom-4 right-4 bg-primary text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-white shadow-lg">
+                                <span class="material-symbols-outlined w-8">add_shopping_cart</span>
+                            </button>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-white font-bold text-lg group-hover:text-primary transition-colors">Aero
+                                Sports Bra</h3>
+                            <p class="text-text-secondary text-sm">Maximum breathability</p>
+                            <p class="text-primary font-bold mt-1">$52.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Best Sellers Carousel -->
+            <section class="w-full">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-white text-3xl font-display font-bold uppercase tracking-tight">Best Sellers</h2>
+                    <div class="flex gap-2">
+                        <button
+                            class="p-2 rounded-full border border-border-dark hover:bg-surface-dark text-white transition-colors">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                        </button>
+                        <button
+                            class="p-2 rounded-full border border-border-dark hover:bg-surface-dark text-white transition-colors">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-6 overflow-x-auto hide-scrollbar pb-8 snap-x">
+                    <!-- Carousel Item 1 -->
+                    <div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+                        <div class="relative aspect-square rounded-xl bg-surface-dark overflow-hidden mb-4">
+                            <img class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                                data-alt="Folded black gym shorts on dark background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuByIlV8azWwRfOlY_CfQ9MvqxX_ucmCWlXTkc2G6Jo_RMgQlZ66mhvFipwE6x6-Gui0BCNb0XINoDyTfoX9qwVsCv3xBiMgpQsSjOdjRo9sFV9VKTpGEhxexBu40pgKKfExbnHZ9LJaIE4z5DtM2LjvaaYAXPpkq0k-8am6PbLo6MDXcQ2B1BVylni23-GddiCbWjWrqSe0EwrPspZYwQh3jXHl1HtTSecHF280uKIo6gmYcdYbwIJoVxbJRR4xsPTy-ZgA4tCsyRbW" />
+                            <div
+                                class="absolute top-3 left-3 bg-primary text-black text-xs font-bold px-2 py-1 rounded">
+                                #1 Rated</div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Phantom Shorts</h3>
+                                <p class="text-text-secondary text-sm">Running essential</p>
+                            </div>
+                            <span class="text-primary font-bold">$42.00</span>
+                        </div>
+                    </div>
+                    <!-- Carousel Item 2 -->
+                    <div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+                        <div class="relative aspect-square rounded-xl bg-surface-dark overflow-hidden mb-4">
+                            <img class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                                data-alt="Dumbbells and gym towel on floor"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX2FR9uHdqX0-mZlW0FcInzBmAat-x3piaB7YWXOqDET0pw2-j3Fd1XHFPJ-ged-pff8dKOkj3G5tX2Xe6FDDGr234XtI5Z0mCf0UXiY8E2099ufJyBvWkdslfsCsPyPHbKaq-JauTqb1oNW-VO0hyV1Ol8g4CBmWRWWc3mdKO1gGrVwJ3K42G5IfZfyZvzcq7MOXC1nCMaSqGHL5E7p47LNPdqoAOkm-K7TUQKCh-cM8KQsH_dYg8h-C0xHIlx9JB4BnZ32oDwJ9j" />
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Pro-Grip Gloves</h3>
+                                <p class="text-text-secondary text-sm">Enhanced durability</p>
+                            </div>
+                            <span class="text-primary font-bold">$35.00</span>
+                        </div>
+                    </div>
+                    <!-- Carousel Item 3 -->
+                    <div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+                        <div class="relative aspect-square rounded-xl bg-surface-dark overflow-hidden mb-4">
+                            <img class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                                data-alt="Muscular man posing in tank top"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMzbDKfpDClAWfsHpGahnNsQIsvNlbH1hXRIR3TLVMweWtAcg5sGwjhIDyRBblFstnH9Ert-3R06hTRQMn-iChz_uNbbi6-w5RgqM4rV8g6py6IV6b7dESiAvtotO9keGrKh-RWCeImnCNkSOgZ-CUMLQYY4UYq17C6byZiz0J8dMTId4WcwQJKpDJavwW7pNg8-ToXPLiSp8OJJnWTQx4q8P1ltqhr8bkxccLdEs4x3083lthcwxwsIp5mOsm472jAnsBNG5WiI7p" />
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Titan Tank</h3>
+                                <p class="text-text-secondary text-sm">Breathable mesh</p>
+                            </div>
+                            <span class="text-primary font-bold">$38.00</span>
+                        </div>
+                    </div>
+                    <!-- Carousel Item 4 -->
+                    <div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+                        <div class="relative aspect-square rounded-xl bg-surface-dark overflow-hidden mb-4">
+                            <img class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                                data-alt="Close up of woman tying running shoe"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVql1a5W-oWHzvmsOgfUZj5m-eA5RTtTqnlmdewhqmz8EwGlhRno-PdOiqbUnOkDueuT6RVonrbjXXGjyW5BeBxqyVmi6SLNfqXSfuMcNvDrWConBJWHQ-wZVJbGsmEKzFejzi9jbI79-AatKQ1fz2Y8otw2dGI3mEQu2PinQFL3tNP6f-bXcZlTTflrnNTqBHO8cHSFvlllc_Ft4KEt01M4SImuYjK7Kb-Mfu0wBlqgIwP_4XdBtJ2nC6uUdSlhH4qX48UvcFaRG6" />
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Sprint Runners</h3>
+                                <p class="text-text-secondary text-sm">Ultra-lightweight</p>
+                            </div>
+                            <span class="text-primary font-bold">$120.00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonials Section -->
+            <section
+                class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-surface-dark p-8 md:p-12 rounded-2xl relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+                </div>
+                <div class="flex flex-col justify-center gap-6">
+                    <h2 class="text-white text-3xl md:text-4xl font-display font-black uppercase italic leading-tight">
+                        Trusted by <br /><span class="text-primary">Elite Athletes</span>
+                    </h2>
+                    <p class="text-text-secondary text-lg">Join thousands of professionals who trust BeFit for their
+                        daily grind. Quality that withstands the toughest workouts.</p>
+                    <div class="flex items-center gap-8 mt-4">
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-bold text-white">15k+</span>
+                            <span class="text-sm text-text-secondary">Reviews</span>
+                        </div>
+                        <div class="w-px h-10 bg-border-dark"></div>
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-bold text-white">4.9</span>
+                            <div class="flex text-primary text-sm">
+                                <span class="material-symbols-outlined"
+                                    style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-size: 16px; font-variation-settings: 'FILL' 1;">star_half</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <!-- Testimonial Card 1 -->
+                    <div
+                        class="bg-background-dark p-6 rounded-xl border border-border-dark hover:border-primary/30 transition-colors">
+                        <div class="flex text-primary mb-3">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-gray-300 italic mb-4">"The compression gear is absolutely top-tier. I've washed
+                            my leggings 50 times and they still fit like day one. Unmatched durability."</p>
+                        <div class="flex items-center gap-3">
+                            <img class="w-10 h-10 rounded-full border border-border-dark"
+                                data-alt="Portrait of Sarah Jenkins"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbv1B9303BWqrtNfVSWLBuZrTKsL4TNvu4ijHaP4ToLa9M1WN2n9MmB_iDLVJE7AhvXYmewFCBBxlgJw3ONMlZ89MdMJnlrNEwLw1knVzZHbKM4QCHHU8Ppi836d4w9o65omVprYoVx976Z7wm0c527RkK4YEhg02TBYWjl2XtbBe00fJ4DNnGq4ACqYaKU80q63u1huN6MmS9TaihwK1W9U9cCitfUazms0skvqqlmsfOnKhHN_o-vNZgRfnkEhRAdCGutVXmhICG" />
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Sarah Jenkins</h4>
+                                <p class="text-text-secondary text-xs">CrossFit Trainer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div
+                        class="bg-background-dark p-6 rounded-xl border border-border-dark hover:border-primary/30 transition-colors md:ml-8">
+                        <div class="flex text-primary mb-3">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-size: 20px; font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-gray-300 italic mb-4">"Finally found a hoodie that moves with me. The cut is
+                            perfect for lifting and the style is clean enough for street wear."</p>
+                        <div class="flex items-center gap-3">
+                            <img class="w-10 h-10 rounded-full border border-border-dark"
+                                data-alt="Portrait of Marcus Reid"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5k-iJ0LLBm0n-gdacIMwT1HrHVuoQ-cVNJEbt983VfUMCarTvpxb_worWrm8LdS_SiK0xXQYDjtb1FJWaQan58IqgvC9TKQ36uuOUv5BJSCKy1wWMJCZgV7fNPSxVxfVjmdl7uU2IpgW9YfILuNZ_3Jne_pwcf9wXXhaiqZLIQSU77P1DkM96xZjnZUaOIOmybnm-fUwqxjVaYIjrcDt5J-gnlv7icvQ4grjRlwiMiXWWLI2BaxGDSTtQf3sXAkF6cW7yMJF79xr0" />
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Marcus Reid</h4>
+                                <p class="text-text-secondary text-xs">Pro Athlete</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-surface-dark border-t border-border-dark pt-16 pb-8">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            <h2 class="text-white text-2xl font-black font-display italic">BeFit</h2>
+                        </div>
+                        <p class="text-text-secondary text-sm leading-relaxed">
+                            Empowering your fitness journey with high-performance apparel designed to last.
+                        </p>
+                        <div class="flex gap-4 mt-2">
+                            <a class="w-10 h-10 rounded-full bg-background-dark flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all"
+                                href="#">
+                                <!-- Social placeholder -->
+                                <span class="font-bold">IG</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-background-dark flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all"
+                                href="#">
+                                <span class="font-bold">X</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-background-dark flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all"
+                                href="#">
+                                <span class="font-bold">YT</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Links 1 -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Shop</h4>
+                        <ul class="flex flex-col gap-3 text-text-secondary text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Men's Collection</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Women's Collection</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <!-- Links 2 -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Support</h4>
+                        <ul class="flex flex-col gap-3 text-text-secondary text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Newsletter -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Stay in the loop</h4>
+                        <p class="text-text-secondary text-sm mb-4">Subscribe for exclusive drops and early access.</p>
+                        <form class="flex flex-col gap-3">
+                            <input
+                                class="w-full bg-background-dark border border-border-dark rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                placeholder="Enter your email" type="email" />
+                            <button
+                                class="bg-white hover:bg-gray-200 text-black font-bold uppercase py-3 rounded-lg tracking-wide transition-colors"
+                                type="button">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-text-secondary text-xs">© 2023 BeFit Inc. All rights reserved.</p>
+                    <div class="flex gap-6 text-text-secondary text-xs">
+                        <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                        <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
